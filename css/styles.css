@@ -4,7 +4,6 @@
     --color-secondary: #3b3297;
     --color-accent: #b551c7;
     --color-headings: white;
-    --color-body: #050a30;
 }
 /*Typography*/
 html{
@@ -20,7 +19,7 @@ h1{
     color: var(--color-headings)
 }
 .dark-color,h2, h3{
-    color: var(--color-body)
+    color: var(--color-primary-darker)
 }
 h1 {
     font-size: 7rem;
@@ -57,9 +56,9 @@ a{
 }
 .link-arrow{
     color: var(--color-accent);
-    text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .link-arrow::after{
     content: "-->";
@@ -73,5 +72,43 @@ a{
 @media screen and (min-width: 1024px) {
     .link-arrow {
         font-size: 1.5rem;
+    }
+}
+
+/*Badges*/
+.badge{
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+.badge--small{
+    font-size: 1.6rem;
+}
+
+.badge--primary{
+    background: var(--color-primary);
+    color: white;
+}
+.badge--primary-dark{
+    background: var(--color-primary-darker);
+    color: white;
+}
+.badge--secondary{
+    background: var(--color-secondary);
+    color: white;
+}
+.badge--accent{
+    background-color: var(--color-accent);
+    color: white;
+}
+
+@media screen and (min-width: 1024px){
+    .badge{
+        font-size: 1.5rem;
+    }
+    .badge--small{
+        font-size: 1.2rem;
     }
 }
