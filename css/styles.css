@@ -4,6 +4,9 @@
     --color-secondary: #3b3297;
     --color-accent: #b551c7;
     --color-headings: white;
+    --color-body: #cdd2ff; 
+    --my-gradient: linear-gradient(90deg, rgba(1,0,27,1) 0%, rgba(148,87,255,1) 100%);
+    --my-gradient-light: linear-gradient(90deg, rgba(201,140,243,1) 9%, rgba(228,147,255,1) 32%, rgba(252,252,252,1) 100%);;
 }
 /*Typography*/
 html{
@@ -13,7 +16,7 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
-    color: var(--color-body);
+    background-color: var(--color-body);
 }
 h1{
     color: var(--color-headings)
@@ -112,3 +115,16 @@ a{
         font-size: 1.2rem;
     }
 }
+
+/*Lists*/
+.list{
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-primary-darker);
+}
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
