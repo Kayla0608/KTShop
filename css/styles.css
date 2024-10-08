@@ -128,3 +128,29 @@ a{
     margin-right: 2rem;
 }
 
+.list--check {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.list--check li {
+    position: relative; /* Establish a positioning context */
+    padding-left: 4rem; /* Space for the checkmark */
+    margin-bottom: 1rem;
+}
+
+.list--check li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 4rem;    /* Set desired width */
+    height: 4rem;   /* Set desired height */
+    background-image: url(../assets/icons/check.png); /* Correct image path */
+    background-size: contain; /* Scale image to fit */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
