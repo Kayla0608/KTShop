@@ -154,20 +154,101 @@ a{
     background-position: center;
 }
 /*Button*/
+a.btn{
+    font-weight: 703;
+    line-height: 1.2;
+}
 .btn {
-    border-radius: 40px;
-    border: 0;
+    border-radius: 4rem;
     cursor: pointer;
+    border: 0;
     font-size: 1.8rem;
+    line-height: 1.2;
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
-    padding: 2rem 4vw;
+    padding: 2rem 6vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
 }
-.btn-accent{
+.btn--primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+.btn--primary:hover {
+    background: #8154ce
+}
+
+.btn--primary-dark {
+    background-color: var(--color-primary-darker);
+    color: white;
+}
+.btn--primary-dark:hover {
+    background: #272f6b
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+    color: white;
+}
+.btn--secondary:hover {
+    background: #6960ce;
+}
+
+.btn--accent {
     background-color: var(--color-accent);
     color: white;
+}
+.btn--accent:hover {
+    background: #c17bce;
+}
+
+.btn--clear {
+    background-color: transparent;
+    border: .3rem solid var(--color-primary-darker);
+    color: transparent; /* Hide text color */
+    background-image: var(--my-gradient); /* Change to desired gradient */
+    background-clip: text; /* Clip the background to text */
+    -webkit-background-clip: text; /* For Safari */
+    position: relative; /* Added for positioning */
+}
+
+/* Overlay for hover effect */
+.btn--clear::before {
+    content: '';
+    position: absolute;
+    border-radius: 4rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(143, 149, 204, 0.5); /* Background color for hover */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Smooth transition */
+    z-index: 0; /* Behind the text */
+}
+
+.btn--clear:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.btn--clear span {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the overlay */
+    color: transparent; /* Hide text color */
+    background-image: var(--my-gradient); /* Gradient background for text */
+    background-clip: text; /* Clip the background to text */
+    -webkit-background-clip: text; /* For Safari */
+}
+
+.btn--block{
+    width: 100%;
+    display: inline-block;
+}
+
+@media screen and (min-width: 1024) {
+    .btn{
+            font-size: 1.5rem;
+    }
 }
