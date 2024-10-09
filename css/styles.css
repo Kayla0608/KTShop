@@ -287,3 +287,41 @@ a.btn{
 .input-group .btn {
     margin: 3px;
 }
+
+/* Cards */
+.card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #bcb5da91;
+}
+.card__header, .card__body {
+    padding: 2rem 3rem; 
+}
+.card-white {
+    background-color: white;
+}
+.card-gradient-dark {
+    background: var(--my-gradient);
+    color: white;
+}
+.card-gradient-light {
+    background: var(--my-gradient-light);
+    color: white;
+}
+.card-primary-dark {
+    background: var(--color-primary-darker);
+    color: white;
+}
+.card-text-dark {
+    background-color: white;
+    color: var(--color-primary-darker);
+}
+.card-text-accent {
+    background-color: white;
+    color: var(--color-accent);
+}
+.card-text-gradient {
+    color: transparent; 
+    background-image: var(--my-gradient); 
+    background-clip: text; 
+    -webkit-background-clip: text; /
+}
