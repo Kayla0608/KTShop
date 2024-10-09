@@ -252,3 +252,38 @@ a.btn{
             font-size: 1.5rem;
     }
 }
+
+/* Inputs */
+.input {
+    padding: 1.5rem 3.5rem;
+    border: .1rem solid var(--color-primary-darker);
+    border-radius: 3rem;
+    outline: 0;
+    color: var(--color-primary-darker);
+    font-size: 2rem;
+
+}
+::placeholder{
+    color: #cdcbd7; 
+}
+
+@media screen  and (min-width: 1024px) {
+    .input{
+        font-size: 1.5rem;
+    }
+}
+
+.input-group {
+    border: .1rem solid var(--color-primary-darker);
+    border-radius: 3rem; 
+    background-color: white;
+    display: flex;
+}
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+.input-group .btn {
+    margin: 3px;
+}
