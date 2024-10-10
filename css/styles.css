@@ -16,7 +16,7 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
-    background-color: var(--color-body);
+    background-color: var(--);
 }
 h1{
     color: var(--color-headings)
@@ -362,6 +362,9 @@ a.btn{
 }
 
 /* Plans */
+.plan{
+    border-radius: 1rem;
+}
 .plan--popular .card__header{
     position: relative;
 }
@@ -414,4 +417,27 @@ a.btn{
     .plan__description{
         font-size: 1.7rem;
     }
+}
+
+/* Media */
+.media-icon{
+    width: 5rem;
+}
+.media{
+    display: flex;
+}
+.media__title{
+    margin-top: 0;   
+}
+.media__body{
+    margin: 0 2rem;
+}
+.media__image{
+    margin-top: 0.8rem;
+}
+.media-header-color{
+    color: var(--color-primary);
+}
+.media-p-color {
+    color: white;
 }
