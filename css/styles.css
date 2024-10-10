@@ -1,6 +1,6 @@
 :root{
     --color-primary: #6533bd ;
-    --color-primary-darker: #050a30;
+    --color-primary-darker: #0c0535;
     --color-secondary: #3b3297;
     --color-accent: #b551c7;
     --color-headings: white;
@@ -88,6 +88,7 @@ a{
 }
 .badge--small{
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .badge--primary{
@@ -120,7 +121,7 @@ a{
 .list{
     list-style: none;
     padding-left: 0;
-    color: var(--color-primary-darker);
+    color: var(--color-secondary);
 }
 
 .list--inline .list__item{
@@ -213,6 +214,15 @@ a.btn{
     -webkit-background-clip: text; /* For Safari */
     position: relative; /* Added for positioning */
 }
+.btn--clear-purple {
+    background-color: transparent;
+    border: .3rem solid var(--color-accent);
+    color: transparent; /* Hide text color */
+    background-image: var(--my-gradient-light); /* Change to desired gradient */
+    background-clip: text; /* Clip the background to text */
+    -webkit-background-clip: text; /* For Safari */
+    position: relative; /* Added for positioning */
+}
 
 /* Overlay for hover effect */
 .btn--clear::before {
@@ -241,7 +251,32 @@ a.btn{
     background-clip: text; /* Clip the background to text */
     -webkit-background-clip: text; /* For Safari */
 }
+.btn--clear-purple::before {
+    content: '';
+    position: absolute;
+    border-radius: 4rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(240, 211, 237, 0.5); /* Background color for hover */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Smooth transition */
+    z-index: 0; /* Behind the text */
+}
 
+.btn--clear-purple:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.btn--clear-purple span {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the overlay */
+    color: transparent; /* Hide text color */
+    background-image: var(--my-gradient-light); /* Gradient background for text */
+    background-clip: text; /* Clip the background to text */
+    -webkit-background-clip: text; /* For Safari */
+}
 .btn--block{
     width: 100%;
     display: inline-block;
@@ -324,4 +359,59 @@ a.btn{
     background-image: var(--my-gradient); 
     background-clip: text; 
     -webkit-background-clip: text; /
+}
+
+/* Plans */
+.plan--popular .card__header{
+    position: relative;
+}
+.plan--popular .card__header::before{
+    content:url(../assets/icons/popular.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: 5%    
+}
+.plan__name {
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+.plan__price {
+    font-size: 6rem;
+}
+.plan__billing-cycle {
+    font-size: 2.4;
+    font-weight: 300;
+    opacity: 0.8;
+    margin: 1rem;
+}
+.plan__description{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+}
+.plan .list__item {
+    margin-bottom: 2rem;
+}
+.plan .list__item-accent{
+    color: var(--color-accent);
+}
+
+@media screen and (min-width: 1024){
+    .plan__name{
+        font-size: 1.4rem;
+    }
+    .plan__price{
+        font-size: 5rem;
+    }
+    .plan__billing-cycle{
+        font-size: 1.6rem;
+    }
+    .plan__description{
+        font-size: 1.7rem;
+    }
 }
