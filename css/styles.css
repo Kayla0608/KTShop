@@ -16,7 +16,7 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
-    background-color: var(--);
+    background-color: var(--color-body);
 }
 h1{
     color: var(--color-headings)
@@ -223,7 +223,6 @@ a.btn{
     -webkit-background-clip: text; /* For Safari */
     position: relative; /* Added for positioning */
 }
-
 /* Overlay for hover effect */
 .btn--clear::before {
     content: '';
@@ -280,6 +279,10 @@ a.btn{
 .btn--block{
     width: 100%;
     display: inline-block;
+}
+.btn--stretch {
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 @media screen and (min-width: 1024) {
@@ -535,12 +538,6 @@ a.btn{
     position: relative;
 }
 
-.quote__image {
-    width: 3vw; 
-    height: auto; 
-    display: inline-flex; 
-}
-
 .testimonial__image > .icon-container {
     position: absolute;
     top: 3rem;
@@ -548,12 +545,15 @@ a.btn{
 }
 
 @media screen and (max-width: 768px) {
+    .testimonial{
+        padding: 3rem 4.5rem;
+    }
     blockquote{
-        margin: 1rem !important;
+        margin: 2rem 0 !important;
     }
     .testimonial .quote__text{
-        font-size: 1.8rem;
-        
+        font-size: 2rem;
+        line-height: 1.5;
     }
     .testimonial .quote__text-name{
         font-size: 2rem;
@@ -561,8 +561,53 @@ a.btn{
     .testimonial #line {
         bottom: 17px;
         width: 3.7rem;
+        margin-left: 0;
     }
     .testimonial .quote__text-description{
         font-size: 1.5rem;
+    }
+    .testimonial .icon{
+        width: 25px;
+        height: auto;
+    }
+}
+
+/* Callouts */
+.callout {
+    padding: 4rem ;
+    border-radius: 5px;
+}
+.callout--primary {
+    background: var(--my-gradient);
+    color: var(--color-body)
+}
+.callout__heading{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 3rem
+}
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+.callout__p {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid__cols-2{
+        grid-template-columns: 1fr auto;
+    }
+    .callout__content{
+        text-align: left;
+    }
+    .callout .btn {
+        justify-self: start;
+        margin: 0 3rem;
     }
 }
