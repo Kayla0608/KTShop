@@ -445,10 +445,10 @@ a.btn{
 /* Quotes */
 .quote{
     font-style: italic;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--color-secondary);
     line-height: 1.3;
-    margin: 2rem;
+    margin-left: 4rem;
 }
 .quote__text::before {
     content: open-quote;
@@ -465,15 +465,16 @@ a.btn{
     margin: 0;
 }
 .quote__text-description{
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: var(--color-primary);
     opacity: 0.5;
+    font-style: normal;
 }
 #line{
     position: relative;
     bottom: 10px;
     width: 5rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
 }
 
 @media screen and (min-width: 1024px){
@@ -485,5 +486,83 @@ a.btn{
     }
     .quote__text-description {
         font-size: 1.6rem;
+    }
+}
+.grid{
+    display: grid;
+}
+
+@media screen and (min-width: 768px) {
+    .grid__cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid__cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 
+
+/* Icons */
+.icon {
+    width: 40px;
+    height: 40px;
+}
+.icon--white{
+    fill: white;    
+}
+.icon-container {
+    background: var(--color-primary);
+    width: 64px;    
+    height: 64px;
+    border-radius:100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Testimonials */
+.testimonial { 
+    padding: 3rem;
+}
+
+.testimonial__image > img{
+    width: 100%;
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+.quote__image {
+    width: 3vw; 
+    height: auto; 
+    display: inline-flex; 
+}
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+}
+
+@media screen and (max-width: 768px) {
+    blockquote{
+        margin: 1rem !important;
+    }
+    .testimonial .quote__text{
+        font-size: 1.8rem;
+        
+    }
+    .testimonial .quote__text-name{
+        font-size: 2rem;
+    }
+    .testimonial #line {
+        bottom: 17px;
+        width: 3.7rem;
+    }
+    .testimonial .quote__text-description{
+        font-size: 1.5rem;
     }
 }
