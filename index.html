@@ -10,15 +10,18 @@
     <title>Document</title>
 </head>
 <body> 
-   <div class="callout callout--primary">
-    <div class="grid grid__cols-2">
-        <div class="callout__content">
-            <h2 class="callout__heading">Ready to get started?</h2>
-            <p class="callout__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque omnis nisi numquam quas magnam voluptatem fugiat ducimus voluptate unde cum.</p>
+    <div class="collapsible collapsible--expanded"> 
+        <header class="collapsible__header">
+            <h2 class="collapsible__heading">Item 1</h2>
+            <svg class="icon icon--white collapsible__chevron">
+                <use xlink:href="assets/svgs/sprite.svg#chevron"></use>
+            </svg>
+        </header>
+        <div class="collapsible__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nemo?
         </div>
-        <a href="#" class="btn btn--primary btn--stretch">Get Started</a>
     </div>
-   </div>
+    <script src="js/main.js"></script>
 </body>
 
 
